@@ -14,6 +14,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <Header />
     <main>
       <section class="hero">
+        <div style="font-size: 4rem; margin-bottom: 1rem;">🧠</div>
         <h1>Cognara</h1>
         <p class="tagline">An AI-First Content & Innovation Entity</p>
         <p class="description">
@@ -68,17 +69,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
   .hero {
     text-align: center;
-    padding: 4rem 0;
+    padding: 6rem 0 4rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: -2rem -2rem 4rem;
+    color: white;
+    border-radius: 0 0 2rem 2rem;
   }
 
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    font-weight: 800;
   }
 
   .tagline {
     font-size: 1.5rem;
-    color: #666;
+    opacity: 0.95;
     margin-bottom: 1.5rem;
   }
 
@@ -86,17 +92,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto;
-    line-height: 1.6;
+    opacity: 0.9;
   }
 
   .mission, .projects {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
     text-align: center;
+    color: #1f2937;
   }
 
   .mission-points, .project-grid {
@@ -106,12 +113,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   }
 
   .mission-points > div, .project {
-    padding: 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 2rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .mission-points > div:hover, .project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
 
   h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #667eea;
+  }
+
+  p {
+    color: #6b7280;
+    line-height: 1.7;
   }
 </style>
