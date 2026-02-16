@@ -1,0 +1,54 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="L.L.Bean Work - Cognara" description="Client work showcase" />
+  </head>
+  <body>
+    <Header />
+    <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+      <div id="login-form">
+        <h1>Client Access</h1>
+        <input type="password" id="password" placeholder="Enter password" style="padding: 0.5rem; font-size: 1rem; margin-right: 0.5rem;" />
+        <button onclick="checkPassword()" style="padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer;">Access</button>
+        <p id="error" style="color: red; display: none; margin-top: 1rem;">Incorrect password</p>
+      </div>
+      
+      <div id="content" style="display: none;">
+        <h1>L.L.Bean Projects</h1>
+        <p>Portfolio content for L.L.Bean goes here...</p>
+        <!-- Add your work samples, videos, descriptions -->
+      </div>
+    </main>
+    <Footer />
+    
+    <script>
+      function checkPassword() {
+        const password = document.getElementById('password').value;
+        const correctPassword = 'llbean2026';
+        
+        if (password === correctPassword) {
+          document.getElementById('login-form').style.display = 'none';
+          document.getElementById('content').style.display = 'block';
+          sessionStorage.setItem('llbean-auth', 'true');
+        } else {
+          document.getElementById('error').style.display = 'block';
+        }
+      }
+      
+      if (sessionStorage.getItem('llbean-auth') === 'true') {
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      }
+      
+      document.getElementById('password').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') checkPassword();
+      });
+    </script>
+  </body>
+</html>
