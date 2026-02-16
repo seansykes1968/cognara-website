@@ -1,54 +1,354 @@
----
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
----
+<div id="content" style="display: none;">
+  <article style="max-width: 900px; margin: 0 auto;">
+    <header style="margin-bottom: 3rem;">
+      <h1>L.L.Bean Virtual Photoshoot Case Study</h1>
+      <p style="font-size: 1.2rem; color: #666;">Extending traditional photography with AI-powered seasonal and colorway variations</p>
+    </header>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title="L.L.Bean Work - Cognara" description="Client work showcase" />
-  </head>
-  <body>
-    <Header />
-    <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-      <div id="login-form">
-        <h1>Client Access</h1>
-        <input type="password" id="password" placeholder="Enter password" style="padding: 0.5rem; font-size: 1rem; margin-right: 0.5rem;" />
-        <button onclick="checkPassword()" style="padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer;">Access</button>
-        <p id="error" style="color: red; display: none; margin-top: 1rem;">Incorrect password</p>
+    <!-- Video Section -->
+    <section style="margin-bottom: 4rem;">
+      <h2>Overview Video</h2>
+      <!-- Option 1: YouTube embed -->
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
       </div>
       
-      <div id="content" style="display: none;">
-        <h1>L.L.Bean Projects</h1>
-        <p>Portfolio content for L.L.Bean goes here...</p>
-        <!-- Add your work samples, videos, descriptions -->
+      <!-- Option 2: Local video file -->
+      <!-- <video controls style="width: 100%; border-radius: 8px;">
+        <source src="/llbean/case-study-video.mp4" type="video/mp4">
+      </video> -->
+    </section>
+
+    <!-- The Challenge -->
+    <section style="margin-bottom: 4rem;">
+      <h2>The Challenge</h2>
+      <p>Traditional outdoor apparel photoshoots face fundamental constraints: seasonal availability (can't shoot winter gear in summer), weather dependency (waiting days for the right conditions), and limited location flexibility. For a brand like L.L.Bean with hundreds of SKUs across multiple colorways and seasonal variations, these constraints create a content production bottleneck.</p>
+      <p>The typical workaround: shoot hero colorways on location, relegate remaining SKUs to white-background product shots. Result: incomplete lifestyle context for 60-70% of the product catalog.</p>
+    </section>
+
+    <!-- The Approach -->
+    <section style="margin-bottom: 4rem;">
+      <h2>The Approach</h2>
+      <p>This project demonstrates how AI-powered virtual photoshoots extend traditional photography rather than replace it. The workflow maintains L.L.Bean's authentic Maine outdoor aesthetic while generating variations impossible to capture in a single shoot.</p>
+      
+      <h3 style="margin-top: 2rem;">Phase 1: Brand DNA Extraction</h3>
+      <p>Before generating a single image, I reverse-engineered L.L.Bean's visual identity from their existing catalog and website:</p>
+      <ul>
+        <li><strong>Color palette:</strong> Forest greens, warm earth tones, weathered grays</li>
+        <li><strong>Settings:</strong> Maine lakeside docks, birch forests, weathered wood textures</li>
+        <li><strong>Lighting:</strong> Natural, diffused morning light with atmospheric mist</li>
+        <li><strong>Subject styling:</strong> Authentic outdoor wear, comfortable fit, minimal accessories</li>
+        <li><strong>Composition:</strong> Environmental context, relaxed postures, genuine expressions</li>
+      </ul>
+
+      <h3 style="margin-top: 2rem;">Phase 2: Character Development</h3>
+      <p>Created casting briefs specifying:</p>
+      <ul>
+        <li><strong>Demographics:</strong> Ages 45-55, consistent with L.L.Bean's core customer</li>
+        <li><strong>Styling:</strong> Authentic outdoor enthusiasts, not fashion models</li>
+        <li><strong>Expressions:</strong> Genuine warmth, approachable confidence</li>
+        <li><strong>Body language:</strong> Natural, relaxed movement</li>
+      </ul>
+
+      <h3 style="margin-top: 2rem;">Phase 3: Scene Generation</h3>
+      <p>Built T-pose character references maintaining consistent facial features, body proportions, and styling across all variations. This consistency is critical—the same person must appear credible across different seasons, locations, and outfit changes.</p>
+    </section>
+
+   <!-- Results Gallery -->
+<section style="margin-bottom: 4rem;">
+  <h2>Phase 4: Seasonal & Location Variations</h2>
+  <p>From a single character reference, generated multiple seasonal and location variations. Demonstrating consistency across different demographics:</p>
+
+  <!-- Bill's Gallery -->
+  <div style="margin-top: 3rem;">
+    <h3>Male Character - Bill</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+      <div>
+        <img src="/llbean/bill-fall-lakeside.jpg" alt="Bill fall lakeside" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Fall Lakeside</strong><br>Tan canvas jacket, misty morning</p>
       </div>
-    </main>
-    <Footer />
-    
-    <script>
-      function checkPassword() {
-        const password = document.getElementById('password').value;
-        const correctPassword = 'llbean2026';
+
+      <div>
+        <img src="/llbean/bill-fall-boat-dock.jpg" alt="Bill fall boat dock" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Fall Boat Dock</strong><br>Weathered dock, warm lighting</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-fall-morning-dock.jpg" alt="Bill fall morning dock" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Fall Morning Dock</strong><br>Natural lighting variation</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-winter-dock.jpg" alt="Bill winter dock" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Winter Dock</strong><br>Same location, winter transform</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-winter-green-jacket.jpg" alt="Bill winter green jacket" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Winter Green Jacket</strong><br>Forest green parka</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-cabin-steps.jpg" alt="Bill cabin steps" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Cabin Steps</strong><br>Rustic location variation</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-cabin-picnic-table.jpg" alt="Bill cabin picnic" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Cabin Picnic</strong><br>Relaxed outdoor lifestyle</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-forest-trail.jpg" alt="Bill forest trail" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Forest Trail</strong><br>Birch forest environment</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-boathouse-paddle.jpg" alt="Bill boathouse" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Boathouse</strong><br>Maine waterfront authentic</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-log-cabin-portrait.jpg" alt="Bill log cabin" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Log Cabin Portrait</strong><br>Portrait composition</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-misty-evening-dock.jpg" alt="Bill misty evening" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Misty Evening Dock</strong><br>Atmospheric lighting</p>
+      </div>
+
+      <div>
+        <img src="/llbean/bill-rocky-coast.jpg" alt="Bill rocky coast" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Rocky Coast</strong><br>Coastal location variation</p>
+      </div>
+
+      <div>
+        <img src="/llbean/marcus-misty-morning-dock.jpg" alt="Marcus misty morning" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Misty Morning Dock</strong><br>Atmospheric variation</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jessica's Gallery -->
+  <div style="margin-top: 4rem;">
+    <h3>Female Character - Jessica</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+      <div>
+        <img src="/llbean/jessica-autumn-forest-walk.jpg" alt="Jessica autumn forest" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Autumn Forest Walk</strong><br>Forest trail setting</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-cabin-interior.jpg" alt="Jessica cabin interior" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Cabin Interior</strong><br>Indoor lifestyle context</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-coastal-fence.jpg" alt="Jessica coastal fence" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Coastal Fence</strong><br>Coastal variation</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-dock-canoe.jpg" alt="Jessica dock canoe" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Dock Canoe</strong><br>Waterfront activity</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-forest-trail.jpg" alt="Jessica forest trail" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Forest Trail</strong><br>Hiking context</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-lakeside-morning.jpg" alt="Jessica lakeside morning" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Lakeside Morning</strong><br>Early morning light</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-misty-morning-dock.jpg" alt="Jessica misty dock" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Misty Morning Dock</strong><br>Atmospheric dock scene</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-river-rock.jpg" alt="Jessica river rock" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>River Rock</strong><br>Natural environment</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-rocky-coast-waves.jpg" alt="Jessica rocky coast" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Rocky Coast Waves</strong><br>Coastal weathergear context</p>
+      </div>
+
+      <div>
+        <img src="/llbean/jessica-woodworking-cabin.jpg" alt="Jessica woodworking cabin" style="width: 100%; border-radius: 8px;" />
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Woodworking Cabin</strong><br>Activity-based context</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Insight Box -->
+  <div style="margin-top: 3rem; padding: 2rem; background: #f0f9ff; border-left: 4px solid #667eea; border-radius: 8px;">
+    <h4 style="margin-top: 0;">Character Consistency Across Demographics</h4>
+    <p>Both character sets demonstrate the same technical capability: maintaining consistent facial features, authentic expressions, and brand-appropriate styling across multiple seasons, locations, and lighting conditions. This allows brands to represent diverse customer demographics while maintaining production efficiency.</p>
+  </div>
+</section>
+
+    <!-- Technical Implementation -->
+    <section style="margin-bottom: 4rem;">
+      <h2>Technical Implementation</h2>
+      
+      <h3>Tools Used:</h3>
+      <ul>
+        <li>Weavy AI workflow system</li>
+        <li>Custom L.L.Bean brand prompts incorporating visual DNA analysis</li>
+        <li>Iterative refinement for consistency across scenes</li>
+      </ul>
+
+      <h3 style="margin-top: 2rem;">Key Technical Challenges Solved:</h3>
+      <ul>
+        <li><strong>Character Consistency:</strong> Maintaining same facial features across different scenes and seasonal variations</li>
+        <li><strong>Brand Authenticity:</strong> Avoiding generic "AI look" while capturing L.L.Bean's specific Maine outdoor aesthetic</li>
+        <li><strong>Environmental Realism:</strong> Generating believable atmospheric effects (morning mist, winter light, seasonal textures)</li>
+        <li><strong>Apparel Accuracy:</strong> Ensuring clothing drapes, fits, and appears authentic to L.L.Bean's quality standards</li>
+      </ul>
+    </section>
+
+    <!-- Business Applications -->
+    <section style="margin-bottom: 4rem;">
+      <h2>Business Applications</h2>
+      <p>This workflow enables content production scenarios impossible or cost-prohibitive with traditional photography:</p>
+
+      <h3>1. Complete Colorway Coverage</h3>
+      <ul>
+        <li>Shoot 2-3 hero colors on location</li>
+        <li>Generate remaining 8-10 colorways in same scene</li>
+        <li>Every SKU gets lifestyle context instead of white-background treatment</li>
+      </ul>
+
+      <h3>2. Seasonal Adaptability</h3>
+      <ul>
+        <li>One base shoot → multiple seasonal variations</li>
+        <li>React to weather patterns (warm fall → extend summer content; early snow → accelerate winter launch)</li>
+        <li>Reduce 6-month lead times to 48 hours</li>
+      </ul>
+
+      <h3>3. Weather Condition Flexibility</h3>
+      <ul>
+        <li>Can't control weather on shoot day</li>
+        <li>Generate: rain for rain gear, snow for winter parkas, fog for layering pieces</li>
+        <li>Show products in actual use conditions</li>
+      </ul>
+
+      <h3>4. Geographic Localization</h3>
+      <ul>
+        <li>Shoot core Maine scenes (brand authenticity)</li>
+        <li>Generate: Rocky Mountain, Pacific Northwest, Green Mountain variations</li>
+        <li>Regional personalization without 50 different location shoots</li>
+      </ul>
+
+      <h3>5. Product Combination Testing</h3>
+      <ul>
+        <li>Show same jacket with 5 different flannel options</li>
+        <li>Demonstrate outfit pairings for cross-sell</li>
+        <li>"Complete the look" merchandising</li>
+      </ul>
+    </section>
+
+    <!-- Production Economics -->
+    <section style="margin-bottom: 4rem; background: #f9f9f9; padding: 2rem; border-radius: 8px;">
+      <h2>Production Economics</h2>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+        <div>
+          <h3>Traditional Photoshoot:</h3>
+          <ul>
+            <li><strong>Lead time:</strong> 8-12 weeks</li>
+            <li><strong>Cost:</strong> $150K+ for multi-day location shoot</li>
+            <li><strong>Output:</strong> 3-4 colorways, single season, one location</li>
+            <li><strong>Variations:</strong> Limited to what's physically shot</li>
+          </ul>
+        </div>
         
-        if (password === correctPassword) {
-          document.getElementById('login-form').style.display = 'none';
-          document.getElementById('content').style.display = 'block';
-          sessionStorage.setItem('llbean-auth', 'true');
-        } else {
-          document.getElementById('error').style.display = 'block';
-        }
-      }
+        <div>
+          <h3>AI-Extended Workflow:</h3>
+          <ul>
+            <li><strong>Lead time:</strong> 48 hours from concept to final assets</li>
+            <li><strong>Cost:</strong> Fraction of reshoot costs</li>
+            <li><strong>Output:</strong> Unlimited colorways, multiple seasons, multiple locations</li>
+            <li><strong>Variations:</strong> Exponential from single base concept</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">ROI Scenario:</h3>
+      <ul>
+        <li>Avoid one reshoot due to weather: <strong>$150K saved</strong></li>
+        <li>Generate 8 additional colorway variations: Equivalent to <strong>$120K in additional shoots</strong></li>
+        <li>Seasonal variation capability: Equivalent to 4 separate location shoots (<strong>$600K value</strong>)</li>
+      </ul>
+    </section>
+
+    <!-- Quality Standards -->
+    <section style="margin-bottom: 4rem;">
+      <h2>Quality Standards</h2>
+      <p>These images are intentionally designed as production-ready assets, not proof-of-concept demos. Every element—from the atmospheric mist to the weathered dock texture to the authentic expression—was refined to meet brand standards for:</p>
+      <ul>
+        <li>E-commerce product pages</li>
+        <li>Email marketing campaigns</li>
+        <li>Social media content</li>
+        <li>Digital advertising</li>
+        <li>Catalog consideration (with appropriate disclosure)</li>
+      </ul>
+    </section>
+
+    <!-- What This Is NOT -->
+    <section style="margin-bottom: 4rem; background: #fff3cd; padding: 2rem; border-radius: 8px; border-left: 4px solid #ffc107;">
+      <h2>What This Is NOT</h2>
+      <p>This is not photography replacement. L.L.Bean's brand strength comes from authentic outdoor imagery shot on location in Maine. That remains irreplaceable for hero campaigns and brand storytelling.</p>
+      <p><strong>This workflow extends those investments.</strong> One great photoshoot becomes 10x more valuable when you can generate seasonal variations, additional colorways, and location alternatives that maintain the same authentic quality.</p>
+    </section>
+
+    <!-- Implementation -->
+    <section style="margin-bottom: 4rem;">
+      <h2>Implementation Approach</h2>
+      <p>For brands considering this capability:</p>
+
+      <h3>Phase 1: Proof of Concept (2 weeks)</h3>
+      <ul>
+        <li>20-30 variations from existing shoot imagery</li>
+        <li>Zero/low cost validation</li>
+        <li>Quality assessment against brand standards</li>
+      </ul>
+
+      <h3>Phase 2: System Integration (6 weeks)</h3>
+      <ul>
+        <li>Brand DNA documentation</li>
+        <li>Workflow customization</li>
+        <li>Team training (2-3 people)</li>
+      </ul>
+
+      <h3>Phase 3: Production Deployment</h3>
+      <ul>
+        <li>90-day support period</li>
+        <li>Weekly optimization</li>
+        <li>Handoff to in-house team</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #e5e7eb;">
+      <p><strong>Technical Notes:</strong> All images generated using Weavy AI platform with custom brand prompts. No stock photography or pre-existing templates. Character consistency maintained through T-pose reference methodology. Seasonal and environmental variations generated through controlled prompt engineering rather than simple filters or overlays.</p>
       
-      if (sessionStorage.getItem('llbean-auth') === 'true') {
-        document.getElementById('login-form').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-      }
+      <p style="margin-top: 2rem;"><strong>Contact:</strong><br>
+      Sean Sykes<br>
+      Global Asset Studio Director, SharkNinja</p>
       
-      document.getElementById('password').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') checkPassword();
-      });
-    </script>
-  </body>
-</html>
+      <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;"><em>This case study demonstrates capability development for L.L.Bean's visual brand system. Not affiliated with or endorsed by L.L.Bean, Inc.</em></p>
+    </footer>
+  </article>
+</div>
