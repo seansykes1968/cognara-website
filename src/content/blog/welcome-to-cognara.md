@@ -2,7 +2,7 @@
 title: 'Welcome to Cognara'
 description: 'Introducing our AI-first approach to content creation'
 pubDate: 'Feb 15 2026'
-heroImage: '/blog-placeholder-1.jpg'
+heroImage: '/blog-placeholder-3.jpg'
 ---
 
 We're excited to launch Cognara, an AI-first content and innovation entity.
