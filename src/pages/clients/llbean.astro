@@ -9,7 +9,12 @@ import Footer from '../../components/Footer.astro';
     <BaseHead title="L.L.Bean Work - Cognara" description="Client work showcase" />
   </head>
   <body>
-    <Header />
+    <header style="padding: 2rem 0; text-align: center; background: #000;">
+      <a href="/">
+        <img src="/CognaraLogoBlue.svg" alt="Cognara" style="height: 60px;" />
+      </a>
+    </header>
+    
     <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
       
       <!-- Login Form -->
@@ -69,12 +74,13 @@ import Footer from '../../components/Footer.astro';
             <!-- Bill's Gallery -->
             <div style="margin-top: 3rem;">
               <h3>Male Character - Bill</h3>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">                <div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div>
                   <img src="/llbean/bill-fall-lakeside.jpg" alt="Bill fall lakeside" style="width: 100%; border-radius: 8px;" />
                   <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Fall Lakeside</strong><br>Tan canvas jacket, misty morning</p>
                 </div>
 
-               <div>
+                <div>
                   <img src="/llbean/bill-cabin-steps.jpg" alt="Bill cabin steps" style="width: 100%; border-radius: 8px;" />
                   <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Cabin Steps</strong><br>Rustic location variation</p>
                 </div>
@@ -84,7 +90,7 @@ import Footer from '../../components/Footer.astro';
                   <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Cabin Picnic</strong><br>Relaxed outdoor lifestyle</p>
                 </div>
 
-               <div>
+                <div>
                   <img src="/llbean/bill-boathouse-paddle.jpg" alt="Bill boathouse" style="width: 100%; border-radius: 8px;" />
                   <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Boathouse</strong><br>Maine waterfront authentic</p>
                 </div>
@@ -94,7 +100,8 @@ import Footer from '../../components/Footer.astro';
             <!-- Jessica's Gallery -->
             <div style="margin-top: 4rem;">
               <h3>Female Character - Jessica</h3>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">               <div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div>
                   <img src="/llbean/jessica-coastal-fence.jpg" alt="Jessica coastal fence" style="width: 100%; border-radius: 8px;" />
                   <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Coastal Fence</strong><br>Coastal variation</p>
                 </div>
@@ -109,12 +116,11 @@ import Footer from '../../components/Footer.astro';
                   <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Cabin Exterior</strong><br>Hiking context</p>
                 </div>
 
-               <div>
+                <div>
                   <img src="/llbean/jessica-misty-morning-dock.jpg" alt="Jessica misty dock" style="width: 100%; border-radius: 8px;" />
                   <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Misty Morning Dock</strong><br>Atmospheric dock scene</p>
                 </div>
-
-             </div>
+              </div>
             </div>
 
             <!-- Key Insight Box -->
@@ -230,30 +236,32 @@ import Footer from '../../components/Footer.astro';
               <li>Digital advertising</li>
               <li>Catalog consideration (with appropriate disclosure)</li>
             </ul>
-<!-- What This Enables -->
-<section style="margin-bottom: 4rem; background: #e8f4f8; padding: 2rem; border-radius: 8px; border-left: 4px solid #667eea;">
-  <h2>What This Enables</h2>
-  <p>This workflow creates production-ready lifestyle imagery for brands, with two primary use cases:</p>
-  
-  <h3 style="margin-top: 1.5rem;">1. Extending Traditional Photography</h3>
-  <p>When you already have hero photography that defines your brand aesthetic, this multiplies its value:</p>
-  <ul>
-    <li>One location shoot generates unlimited seasonal variations</li>
-    <li>Hero colorways expand to complete SKU coverage</li>
-    <li>Single day shoot becomes year-round content library</li>
-  </ul>
-  
-  <h3 style="margin-top: 1.5rem;">2. Standalone Content Production</h3>
-  <p>For new product lines, seasonal collections, or brands building content libraries from scratch:</p>
-  <ul>
-    <li>Generate complete lifestyle context without location shoots</li>
-    <li>Maintain brand consistency across hundreds of SKUs</li>
-    <li>Produce seasonal content on accelerated timelines</li>
-    <li>Test visual concepts before committing to photography</li>
-  </ul>
-  
-  <p style="margin-top: 1.5rem;"><strong>The key distinction:</strong> This isn't about replacing your existing photography investment. It's about having the flexibility to choose the right tool for each content need—whether that's extending hero shoots, filling gaps in your catalog, or building entirely new visual systems.</p>
-</section>
+          </section>
+
+          <!-- What This Enables -->
+          <section style="margin-bottom: 4rem; background: #e8f4f8; padding: 2rem; border-radius: 8px; border-left: 4px solid #667eea;">
+            <h2>What This Enables</h2>
+            <p>This workflow creates production-ready lifestyle imagery for brands, with two primary use cases:</p>
+            
+            <h3 style="margin-top: 1.5rem;">1. Extending Traditional Photography</h3>
+            <p>When you already have hero photography that defines your brand aesthetic, this multiplies its value:</p>
+            <ul>
+              <li>One location shoot generates unlimited seasonal variations</li>
+              <li>Hero colorways expand to complete SKU coverage</li>
+              <li>Single day shoot becomes year-round content library</li>
+            </ul>
+            
+            <h3 style="margin-top: 1.5rem;">2. Standalone Content Production</h3>
+            <p>For new product lines, seasonal collections, or brands building content libraries from scratch:</p>
+            <ul>
+              <li>Generate complete lifestyle context without location shoots</li>
+              <li>Maintain brand consistency across hundreds of SKUs</li>
+              <li>Produce seasonal content on accelerated timelines</li>
+              <li>Test visual concepts before committing to photography</li>
+            </ul>
+            
+            <p style="margin-top: 1.5rem;"><strong>The key distinction:</strong> This isn't about replacing your existing photography investment. It's about having the flexibility to choose the right tool for each content need—whether that's extending hero shoots, filling gaps in your catalog, or building entirely new visual systems.</p>
+          </section>
 
           <!-- Implementation -->
           <section style="margin-bottom: 4rem;">
@@ -287,8 +295,7 @@ import Footer from '../../components/Footer.astro';
             <p><strong>Technical Notes:</strong> All images generated using AI with custom brand prompts. No stock photography or pre-existing templates. Character consistency maintained through reference methodology. Seasonal and environmental variations generated through controlled prompt engineering rather than simple filters or overlays.</p>
             
             <p style="margin-top: 2rem;"><strong>Contact:</strong><br>
-            Sean Sykes<br>
-<a href="mailto:sean@cognara.ai">sean@cognara.ai</a><br>
+            <a href="mailto:sean@cognara.ai">Sean Sykes</a><br>
             Cognara AI</p>
             
             <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;"><em>This case study demonstrates capability development for L.L.Bean's visual brand system. Not affiliated with or endorsed by L.L.Bean, Inc.</em></p>
@@ -300,8 +307,8 @@ import Footer from '../../components/Footer.astro';
     <Footer />
     
     <!-- Password Check Script -->
-<script is:inline>
-  function checkPassword() {
+    <script is:inline>
+      function checkPassword() {
         const password = document.getElementById('password').value;
         const correctPassword = 'llbean2026';
         
